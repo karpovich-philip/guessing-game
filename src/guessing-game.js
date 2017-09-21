@@ -15,17 +15,18 @@ class GuessingGame {
   }
 
   guess() {
-    var result = Math.ceil((this.state.array.length - 1) / 2);
+    var result = Math.ceil((this.state.array[0] + this.state.array[this.state.array.length - 1]) / 2);
+
     this.state.result = result
     return result;
   }
 
-  lower(result) {
-    return this.state.array.splice(result, this.state.array.length - 1);
+  lower() {
+    return this.state.array.splice(Math.ceil(this.state.array.length / 2), this.state.array.length);
   }
 
   greater() {
-    return this.state.array.splice(0, result);
+    return this.state.array.splice(0, Math.ceil(this.state.array.length / 2));
   }
 }
 
