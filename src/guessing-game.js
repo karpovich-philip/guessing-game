@@ -15,7 +15,7 @@ class GuessingGame {
   }
 
   guess() {
-    var result = Math.ceil((this.state.array[0] + this.state.array[this.state.array.length - 1]) / 2);
+    var result = Math.ceil((this.state.array[1] + this.state.array[this.state.array.length - 1]) / 2);
 
     this.state.result = result
     return result;
