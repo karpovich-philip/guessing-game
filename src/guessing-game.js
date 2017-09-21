@@ -2,6 +2,7 @@ class GuessingGame {
   constructor() {
 
     this.state = {
+      result: null,
       array: []
     }
   }
@@ -14,15 +15,17 @@ class GuessingGame {
   }
 
   guess() {
-    this.state.array
+    var result = Math.ceil((this.state.array.length - 1) / 2);
+    this.state.result = result
+    return result;
   }
 
-  lower() {
-
+  lower(result) {
+    return this.state.array.splice(result, this.state.array.length - 1);
   }
 
   greater() {
-
+    return this.state.array.splice(0, result);
   }
 }
 
