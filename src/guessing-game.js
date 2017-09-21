@@ -1,21 +1,29 @@
 class GuessingGame {
-    constructor() {}
+  constructor() {
 
-    setRange(min, max) {
-
+    this.state = {
+      array: []
     }
+  }
 
-    guess() {
-
+  setRange(min, max) {
+    for (var i = min; i <= max; i++) {
+      var ar = this.state.array;
+      ar.push(i);
     }
+  }
 
-    lower() {
+  guess() {
+    this.state.array
+  }
 
-    }
+  lower() {
 
-    greater() {
+  }
 
-    }
+  greater() {
+
+  }
 }
 
 module.exports = GuessingGame;
