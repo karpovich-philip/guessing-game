@@ -22,11 +22,11 @@ class GuessingGame {
   }
 
   lower() {
-    return this.state.array.splice(Math.ceil(this.state.array.length / 2), this.state.array.length);
+    this.state.array.splice(Math.ceil(this.state.array.length / 2), this.state.array.length - 1);
   }
 
   greater() {
-    return this.state.array.splice(1, Math.ceil(this.state.array.length  / 2));
+    this.state.array.splice(0, Math.ceil(this.state.array.length / 2));
   }
 }
 
