@@ -26,7 +26,7 @@ class GuessingGame {
   }
 
   greater() {
-    return this.state.array.splice(0, Math.ceil(this.state.array.length / 2));
+    return this.state.array.splice(1, Math.ceil(this.state.array.length  / 2));
   }
 }
 
