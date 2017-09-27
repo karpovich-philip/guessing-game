@@ -8,9 +8,9 @@ class GuessingGame {
   }
 
   setRange(min, max) {
-    for (let i = min; i <= max; i++) {
+    for (min; min < max; min++) {
       let ar = this.state.array;
-      ar.push(i);
+      ar.push(min);
     }
   }
 
